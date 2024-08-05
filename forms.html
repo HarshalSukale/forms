@@ -1,0 +1,64 @@
+<html>
+<body>
+ <style>
+    #container {
+      margin-left: 40%;
+      margin-right: 40%;
+      width: 400px;
+      height: 400px;
+      position: relative;
+      background-image:url(bg.png);
+    }
+    #head{
+        background-color: rgb(17,42,76);
+        text-align: center;
+        color: aliceblue;
+    }
+    
+    </style>
+<header id="head">
+<h2>Feedback</h2>
+</header>
+<p style="text-align: center;">Please provide Feedback</p>
+
+
+
+<form id="frm1" action="/action_page.php ">
+    <div id="container">
+        <div id="animate"></div>
+  First name: <input type="text" name="fname" value="Harshal"><br>
+  Last name: <input type="text" name="lname" value="Sukale"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p id="demo" style="text-align: center;"></p>
+
+<script>
+const x = document.forms["frm1"];
+let text = "";
+for (let i = 0; i < x.length ;i++) {
+  text += x.elements[i].value + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+<h2 onclick="this.innerHTML = 'Thank you!'">Click on this text!</h1>
+  <p id="demo"></p>
+
+  <script>
+  document.getElementById("demo").innerHTML = "Date : " + Date();
+  </script>
+
+  <h2>DOM Manipulation Example</h2>
+    <div id="content">
+        <h3>Content Area</h3>
+    </div>
+    <button id="addParagraphButton">Add Paragraph</button>
+
+    <h2>Change Element Styles Example</h2>
+    <div id="styledDiv">Click the button to change my color!</div>
+    <button id="changeColorButton">Change Color</button>
+
+    <script src="add.js"></script>
+</body>
+</body>
+</html>
